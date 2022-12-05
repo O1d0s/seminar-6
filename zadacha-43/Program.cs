@@ -1,7 +1,7 @@
 ﻿Console.Write("Введите размер массива: ");
 int a = int.Parse(Console.ReadLine());
 if( a < 6){
-    Console.WriteLine("Длинга массива должна быть больше 6");
+    Console.WriteLine("Длинга массива должна не меньше 6");
 }
 else{
     int[] arr = GetArray(a);
@@ -19,7 +19,7 @@ else{
 int[] GetArray(int size){
     int[] mas = new int[size];
     for(int i=0;i<size;i++){
-        mas[i] = new Random().Next(-5,10);
+        mas[i] = new Random().Next(0,100);
     }
     return mas;
 }
